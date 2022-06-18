@@ -1,5 +1,6 @@
 from ast import Load
 from pathlib import Path
+from dotenv import load_dotenv
 
 import logging
 import yaml
@@ -21,8 +22,14 @@ def load_config():
     with open("./config.yaml", "r") as handler:
         config = yaml.load(handler, Loader=yaml.FullLoader)
         logger.info("Config file read successfully!")
-        
+
     return config
+
+def set_environment_variables():
+    load_dotenv()
+
+
 
 if __name__ == "__main__":
     load_config()
+    set_environment_variables()

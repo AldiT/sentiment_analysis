@@ -4,3 +4,4 @@ sentiment_analysis/data_exploration/.ipynb_checkpoints
 sentiment_analysis/preprocessing/__pycache__
 sentiment_analysis/__pycache__
 sentiment_analysis/train/__pycache__
+.env
