@@ -1,1 +1,22 @@
-06/18/2022 02:41:02 PM - utils.py - load_config - Line: 24 - INFO - Config file read successfully!
+06/18/2022 08:13:48 PM - utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/18/2022 08:13:52 PM - tpu_cluster_resolver.py - <module> - Line: 32 - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+06/18/2022 08:13:53 PM - __init__.py - <module> - Line: 47 - DEBUG - Creating converter from 7 to 5
+06/18/2022 08:13:53 PM - __init__.py - <module> - Line: 47 - DEBUG - Creating converter from 5 to 7
+06/18/2022 08:13:53 PM - __init__.py - <module> - Line: 47 - DEBUG - Creating converter from 7 to 5
+06/18/2022 08:13:53 PM - __init__.py - <module> - Line: 47 - DEBUG - Creating converter from 5 to 7
+06/18/2022 08:13:55 PM - selector_events.py - __init__ - Line: 59 - DEBUG - Using selector: KqueueSelector
+06/18/2022 08:13:55 PM - selector_events.py - __init__ - Line: 59 - DEBUG - Using selector: KqueueSelector
+06/18/2022 08:13:55 PM - run.py - run_distribute - Line: 81 - INFO - Reading the data from: data/labelled_text.csv
+06/18/2022 08:13:55 PM - run.py - run_distribute - Line: 85 - INFO - Preprocessing starting...
+06/18/2022 08:13:55 PM - dask_utils.py - split_list_data - Line: 19 - INFO - Spliting datasets!
+06/18/2022 08:13:56 PM - dask_utils.py - distribute - Line: 49 - DEBUG - Waiting for event <distributed.event.Event object at 0x7ff2309b8a30>
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 51 - DEBUG - Waiting for event <distributed.event.Event object at 0x7ff2309b8a30> done!
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 49 - DEBUG - Waiting for event <distributed.event.Event object at 0x7ff2308f6c10>
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 51 - DEBUG - Waiting for event <distributed.event.Event object at 0x7ff2308f6c10> done!
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 55 - DEBUG - Getting results for future number: 0.
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 59 - DEBUG - Result for future 0 retrieved successfully!
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 55 - DEBUG - Getting results for future number: 1.
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 59 - DEBUG - Result for future 1 retrieved successfully!
+06/18/2022 08:13:57 PM - dask_utils.py - distribute - Line: 62 - INFO - Distributed computing done!
+06/18/2022 08:13:57 PM - run.py - run_distribute - Line: 91 - INFO - Saving results!
+06/18/2022 08:13:57 PM - run.py - run_distribute - Line: 94 - INFO - Preprocessing done!
