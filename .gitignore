@@ -1,4 +1,5 @@
 data/*
+__pycache__
 sentiment_analysis/data_exploration/.ipynb_checkpoints
 sentiment_analysis/preprocessing/__pycache__
 sentiment_analysis/__pycache__

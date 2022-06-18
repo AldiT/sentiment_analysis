@@ -1,0 +1,2 @@
+06/18/2022 02:31:48 PM - utils.py - load_config - Line: 23 - INFO - Config file read successfully!
+06/18/2022 02:31:48 PM - utils.py - <module> - Line: 28 - INFO - Test from utils with the new logger.
