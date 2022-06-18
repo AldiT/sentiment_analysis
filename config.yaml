@@ -1,0 +1,8 @@
+task:
+  machine_learning:
+    preprocessing:
+      num_workers: 16
+      cache: 1
+    training:
+      graph_mode: 0
+  rest_api: yes
