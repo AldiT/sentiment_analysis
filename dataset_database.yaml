@@ -1,0 +1,20 @@
+datasets:
+
+  - 
+    id: 1
+    name: sentiment_dataset
+    version: 1
+    fileformat: csv
+    foldername: data
+    filename: labelled_text.csv
+    modified: 0
+    has_labels: 1
+  -
+    id: 2
+    name: sentiment_dataset
+    version: 3
+    fileformat: csv
+    foldername: cache/preprocessing
+    filename: initial_texts.pkl
+    modified: 1
+    has_labels: 1
