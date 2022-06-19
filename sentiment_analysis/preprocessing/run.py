@@ -1,5 +1,6 @@
 from dask.distributed import Event, LocalCluster, Client
 from sentiment_analysis.preprocessing.dask_utils import distribute
+from sentiment_analysis.preprocessing.contractions import contractions
 from pathlib import Path
 from typing import List
 from run import config
@@ -39,26 +40,34 @@ def remove_stopwords(texts: List[str], model = None) -> List[str]:
 def remove_special_chars(texts: List[str]) -> List[str]:
     result = []
 
-    for text in texts:
-        text = re.sub(r'\S*@\S*\s?', '', text) #remove email addresses
-        text = re.sub(r'http\S+', '', text) # remove urls
-        result.append(re.sub('[^A-Za-z0-9]+', ' ', text)) # keep only alphanumeric characters
+    for i, text in enumerate(texts):
+        if i % 5000 == 0:
+            logger.info(f"Special char removal: {i}")
+
+        if isinstance(text, str):
+            for word in text.split(): # remove short forms: e.g. I'm --> I am
+                if word.lower() in contractions:
+                    text = text.replace(word, contractions[word.lower()])
+            text = re.sub(r'\S*@\S*\s?', '', text) #remove email addresses
+            text = re.sub(r'http\S+', '', text) # remove urls
+            result.append(re.sub('[^A-Za-z0-9]+', ' ', text)) # keep only alphanumeric characters
+        else:
+            result.append(" ")
 
     return result
 
 def clean(texts: List[List[str]], dask_event_name: str = None, spacy_model: str = "en_core_web_sm"):
     nlp = spacy.load(spacy_model)
-    result = []
-    for text in texts:
-        if isinstance(text, str):
-            text = remove_special_chars(text)
-            text = remove_stopwords(text, model=nlp)
-            result.append(text)
+
+    texts = remove_special_chars(texts)
+    logger.info("Removed special characters.")
+    texts = remove_stopwords(texts, model=nlp)
+    logger.info("Removed stopwords.")
 
     if dask_event_name:
         event = Event(dask_event_name)
         event.set()
-    return result
+    return texts
 
 def filter_nans(texts: List[str], labels: List[str]) -> List[str]:
     result_str, result_lbl = [], []
@@ -70,8 +79,7 @@ def filter_nans(texts: List[str], labels: List[str]) -> List[str]:
     
     return result_str, result_lbl
 
-
-def run_sequential():
+def run_sequential(save: bool = True):
     logger.info("Running preprocessing sequentially!")
     
     data_path = Path(config["ml"]["preprocessing"]["data_path"])
@@ -94,8 +102,9 @@ def run_sequential():
 
     texts = clean(texts)
 
-    logger.info("Saving results!")
-    save_cache_pkl((texts, labels), save_to_folder, save_to_filename)
+    if save:
+        logger.info("Saving results!")
+        save_cache_pkl((texts, labels), save_to_folder, save_to_filename)
     
     logger.info("Preprocessing done!")
 

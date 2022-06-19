@@ -56,3 +56,1130 @@
 06/19/2022 07:09:38 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
 06/19/2022 07:09:43 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_sequential - Line: 86 - INFO - Reading the data from: data/labelled_text.csv
 06/19/2022 07:09:43 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_sequential - Line: 91 - INFO - Preprocessing starting...
+06/19/2022 08:45:45 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:46:42 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:47:49 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:47:50 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:47:55 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [71195]
+06/19/2022 08:47:55 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 08:47:55 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 08:48:19 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 15, in get_models
+    return controller.get_models()
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 28, in get_models
+    return Response(content=self.database["models"], status_code=200)
+KeyError: 'models'
+06/19/2022 08:48:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 08:48:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 08:48:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 08:48:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [71195]
+06/19/2022 08:49:32 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:50:13 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:51:05 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:51:40 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:51:41 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:51:45 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [72692]
+06/19/2022 08:51:45 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 08:51:45 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 08:51:51 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 15, in get_models
+    return controller.get_models()
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 28, in get_models
+    return Response(content=self.database["models"], status_code=200)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 57, in render
+    return content.encode(self.charset)
+AttributeError: 'list' object has no attribute 'encode'
+06/19/2022 08:52:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 08:52:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 08:52:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 08:52:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [72692]
+06/19/2022 08:52:56 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:52:59 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:53:03 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [73104]
+06/19/2022 08:53:03 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 08:53:03 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 08:53:19 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 20, in get_model
+    return controller.get_model(model_id)
+TypeError: get_model() takes 1 positional argument but 2 were given
+06/19/2022 08:54:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 08:54:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 08:54:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 08:54:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [73104]
+06/19/2022 08:54:44 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:54:45 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:54:50 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [73775]
+06/19/2022 08:54:50 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 08:54:50 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 08:54:53 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 318, in __call__
+    stat_result = await anyio.to_thread.run_sync(os.stat, self.path)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/anyio/to_thread.py", line 31, in run_sync
+    return await get_asynclib().run_sync_in_worker_thread(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+FileNotFoundError: [Errno 2] No such file or directory: './cache/lstmv2/lstmv2.h5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 68, in app
+    await response(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 321, in __call__
+    raise RuntimeError(f"File at path {self.path} does not exist.")
+RuntimeError: File at path ./cache/lstmv2/lstmv2.h5 does not exist.
+06/19/2022 08:55:53 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_sequential - Line: 95 - INFO - Saving results!
+06/19/2022 08:55:54 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_sequential - Line: 98 - INFO - Preprocessing done!
+06/19/2022 08:56:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 08:56:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 08:56:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 08:56:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [73775]
+06/19/2022 08:56:24 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:56:26 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:56:31 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [74430]
+06/19/2022 08:56:31 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 08:56:31 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 08:57:30 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 08:57:30 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 08:57:30 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 08:57:30 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [74430]
+06/19/2022 08:57:39 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:57:40 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 08:57:44 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [74863]
+06/19/2022 08:57:44 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 08:57:44 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 08:59:23 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 52, in get_prediction
+    tokenized = self.tokenizer.encode(text)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 08:59:59 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 08:59:59 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 08:59:59 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 08:59:59 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [74863]
+06/19/2022 09:00:03 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:00:04 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:00:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [75978]
+06/19/2022 09:00:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:00:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:00:17 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 56, in get_prediction
+    "label": self._get_label(np.argmax(out)),
+TypeError: _get_label() takes 1 positional argument but 2 were given
+06/19/2022 09:00:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:00:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:00:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:00:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [75978]
+06/19/2022 09:00:36 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:00:37 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:00:42 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [76115]
+06/19/2022 09:00:42 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:00:42 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:00:54 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 60, in get_prediction
+    return JSONResponse(response, status_code=200)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 187, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 190, in render
+    return json.dumps(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type float32 is not JSON serializable
+06/19/2022 09:01:39 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:01:39 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:01:39 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:01:39 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [76115]
+06/19/2022 09:01:50 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:01:52 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:01:56 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [76521]
+06/19/2022 09:01:56 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:01:56 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:02:12 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 60, in get_prediction
+    return JSONResponse(response, status_code=200)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 187, in __init__
+    super().__init__(content, status_code, headers, media_type, background)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/responses.py", line 190, in render
+    return json.dumps(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type float32 is not JSON serializable
+06/19/2022 09:02:51 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:02:51 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:02:51 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:02:51 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [76521]
+06/19/2022 09:03:01 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:03:03 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:03:07 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [77045]
+06/19/2022 09:03:07 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:03:07 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:03:56 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:03:56 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:03:56 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:03:56 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [77045]
+06/19/2022 09:04:03 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:04:04 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:04:09 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [77449]
+06/19/2022 09:04:09 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:04:09 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:05:27 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:05:27 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:05:27 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:05:27 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [77449]
+06/19/2022 09:05:33 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:05:34 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:05:39 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [77955]
+06/19/2022 09:05:39 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:05:39 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:06:16 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:06:16 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:06:16 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:06:16 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [77955]
+06/19/2022 09:06:23 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:06:24 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:06:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [78293]
+06/19/2022 09:06:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:06:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:06:37 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 52, in get_prediction
+    tokenized = self.tokenizer.encode(text)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:07:23 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:07:24 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:07:24 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:07:24 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [78293]
+06/19/2022 09:07:38 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:07:38 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:07:43 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [78740]
+06/19/2022 09:07:43 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:07:43 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:07:49 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 52, in get_prediction
+    tokenized = self.tokenizer.encode([text])
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:08:31 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:08:31 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:08:31 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:08:31 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [78740]
+06/19/2022 09:08:39 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:08:40 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:08:45 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [79134]
+06/19/2022 09:08:45 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:08:45 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:08:50 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 52, in get_prediction
+    tokenized = self.tokenizer.encode(text)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:09:21 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:09:21 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:09:21 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:09:21 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [79134]
+06/19/2022 09:09:29 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:09:30 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:09:34 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [79475]
+06/19/2022 09:09:34 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:09:34 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:09:41 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 52, in get_prediction
+    tokenized = self.tokenizer.encode([text])
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:11:47 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:11:47 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:11:47 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:11:47 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [79475]
+06/19/2022 09:11:52 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:11:52 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:11:57 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [80340]
+06/19/2022 09:11:57 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:11:57 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:12:01 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 53, in get_prediction
+    tokenized = self.tokenizer.encode([text])
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:12:27 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:12:28 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:12:28 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:12:28 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [80340]
+06/19/2022 09:12:38 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:12:39 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:12:43 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [80656]
+06/19/2022 09:12:43 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:12:43 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:12:50 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 54, in get_prediction
+    tokenized = self.tokenizer.encode([text])
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:15:25 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:15:25 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:15:25 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:15:25 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [80656]
+06/19/2022 09:15:30 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:15:30 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:15:35 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [81862]
+06/19/2022 09:15:35 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:15:35 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:16:10 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:16:10 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:16:10 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:16:10 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [81862]
+06/19/2022 09:16:23 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:16:24 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:16:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [82211]
+06/19/2022 09:16:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:16:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:16:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:16:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:16:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:16:36 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [82211]
+06/19/2022 09:16:47 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:16:49 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:16:53 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [82318]
+06/19/2022 09:16:53 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:16:53 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:17:03 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:17:03 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:17:03 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:17:03 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [82318]
+06/19/2022 09:17:56 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:17:59 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:18:04 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [82689]
+06/19/2022 09:18:04 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:18:04 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:18:22 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 54, in get_prediction
+    tokenized = self.tokenizer.encode(text)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:19:05 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:19:05 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:19:05 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:19:05 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [82689]
+06/19/2022 09:19:14 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:19:15 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:19:20 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [83276]
+06/19/2022 09:19:20 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:19:20 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:19:29 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 54, in get_prediction
+    tokenized = self.tokenizer.encode(text)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2256, in encode
+    encoded_inputs = self.encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_base.py", line 2588, in encode_plus
+    return self._encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 499, in _encode_plus
+    batched_output = self._batch_encode_plus(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/transformers/tokenization_utils_fast.py", line 426, in _batch_encode_plus
+    encodings = self._tokenizer.encode_batch(
+TypeError: TextEncodeInput must be Union[TextInputSequence, Tuple[InputSequence, InputSequence]]
+06/19/2022 09:21:24 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:21:24 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:21:24 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:21:24 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [83276]
+06/19/2022 09:21:30 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:21:31 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:21:35 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [84172]
+06/19/2022 09:21:35 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:21:35 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:21:55 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:21:55 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:21:55 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:21:55 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [84172]
+06/19/2022 09:22:02 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:22:03 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:22:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [84297]
+06/19/2022 09:22:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:22:08 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:22:37 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:22:37 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:22:37 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:22:37 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [84297]
+06/19/2022 09:23:11 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:23:17 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:23:22 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [84604]
+06/19/2022 09:23:22 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:23:22 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:23:46 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:23:46 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:23:46 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:23:46 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [84604]
+06/19/2022 09:24:15 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:24:17 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:24:22 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [84946]
+06/19/2022 09:24:22 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:24:22 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:25:12 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:25:12 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:25:12 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:25:12 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [84946]
+06/19/2022 09:25:20 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:25:21 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:25:26 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [85498]
+06/19/2022 09:25:26 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:25:26 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:26:38 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:26:38 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:26:38 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:26:38 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [85498]
+06/19/2022 09:27:21 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:27:43 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:28:16 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:28:17 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:28:23 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [86516]
+06/19/2022 09:28:23 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:28:23 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:28:34 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py - run_asgi - Line: 369 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/routes.py", line 24, in get_prediction
+    return controller.get_prediction(model_id, text)
+  File "/Users/q541063/Documents/projects/celonis_task/./api/v0/models/controller.py", line 58, in get_prediction
+    text = preprocess([text])[0]
+NameError: name 'preprocess' is not defined
+06/19/2022 09:28:49 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:28:49 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:28:49 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:28:49 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [86516]
+06/19/2022 09:28:59 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:29:01 PM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:29:06 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [86815]
+06/19/2022 09:29:06 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/19/2022 09:29:06 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/19/2022 09:31:00 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/19/2022 09:31:00 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/19/2022 09:31:00 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/19/2022 09:31:00 PM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [86815]
+06/19/2022 09:34:06 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:36 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:37 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 107 - INFO - Running preprocessing distributed!
+06/19/2022 09:34:41 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:41 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:41 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:41 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:41 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:41 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:34:42 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 125 - INFO - Reading the data from: data/labelled_text.csv
+06/19/2022 09:34:42 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 131 - INFO - Preprocessing starting...
+06/19/2022 09:34:42 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/dask_utils.py - split_list_data - Line: 19 - INFO - Spliting datasets!
+06/19/2022 09:34:45 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/dask_utils.py - distribute - Line: 62 - INFO - Distributed computing done!
+06/19/2022 09:34:45 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 137 - INFO - Saving results!
+06/19/2022 09:34:45 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 140 - INFO - Preprocessing done!
+06/19/2022 09:40:21 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:40:21 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 112 - INFO - Running preprocessing distributed!
+06/19/2022 09:40:27 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:40:27 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:40:27 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:40:27 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:40:27 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:40:27 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:40:29 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 126 - INFO - Result file already exists, skipping preprocessing!
+06/19/2022 09:42:14 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:42:15 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 110 - INFO - Running preprocessing distributed!
+06/19/2022 09:42:24 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:42:24 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:42:24 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:42:24 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:42:24 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:42:24 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:42:25 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 124 - INFO - Result file already exists, skipping preprocessing!
+06/19/2022 09:45:07 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:08 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 110 - INFO - Running preprocessing distributed!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:17 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:45:19 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 124 - INFO - Result file already exists, skipping preprocessing!
+06/19/2022 09:45:53 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_cache_pkl - Line: 51 - ERROR - File: cache/preprocessing/intitial_texts.pkl not found in cache.
+06/19/2022 09:47:48 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:47:48 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 110 - INFO - Running preprocessing distributed!
+06/19/2022 09:50:08 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:09 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 115 - INFO - Running preprocessing distributed!
+06/19/2022 09:50:30 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:31 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:31 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:31 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:31 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:31 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:31 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:31 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:32 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:33 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 09:50:57 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 133 - INFO - Reading the data from: data/labelled_text.csv
+06/19/2022 09:51:01 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 138 - INFO - Preprocessing starting...
+06/19/2022 09:51:01 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/dask_utils.py - split_list_data - Line: 19 - INFO - Spliting datasets!
+06/19/2022 09:52:10 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:11 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:14 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:14 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:16 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:16 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:16 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:18 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:18 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:18 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:19 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:19 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:20 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:21 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:21 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:21 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:21 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:22 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:24 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:24 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:24 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:27 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:27 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:28 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:28 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:28 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:52:30 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:30 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:52:34 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 5000
+06/19/2022 09:52:37 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:56:59 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:22 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:24 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - remove_special_chars - Line: 45 - INFO - Special char removal: 0
+06/19/2022 09:57:24 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 63 - INFO - Removed special characters.
+06/19/2022 09:57:25 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:30 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:35 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:36 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:38 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:39 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:40 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:40 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:41 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - clean - Line: 65 - INFO - Removed stopwords.
+06/19/2022 09:57:48 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/dask_utils.py - distribute - Line: 62 - INFO - Distributed computing done!
+06/19/2022 09:57:48 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 144 - INFO - Saving results!
+06/19/2022 09:57:48 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 147 - INFO - Preprocessing done!

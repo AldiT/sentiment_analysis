@@ -1,5 +1,4 @@
 from sentiment_analysis.preprocessing.run import run as run_preprocessing
-from sentiment_analysis.train.run import run as run_training
 import logging
 
 logger = logging.getLogger(__name__)
