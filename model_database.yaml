@@ -1,0 +1,18 @@
+models:
+
+  - 
+    id: 1
+    name: lstm
+    version: 2
+    foldername: lstmv3
+    filename: lstmv3.h5
+    train_history_filename: history_lstm_v3.json
+    test_history_filename: history_test_lstm_v3.pkl
+  -
+    id: 2
+    name: transformer
+    version: 1
+    foldername: transformerv1
+    filename: transformerv1.h5
+    train_history_filename: history_transformer_v3.json
+    test_history_filename: history_transformer_lstm_v3.pkl
