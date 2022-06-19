@@ -8,8 +8,8 @@ import yaml
 import os
 import sys
 
-logging.basicConfig(filename='logs.log', format='%(asctime)s - %(filename)s - %(funcName)s - Line: %(lineno)d - %(levelname)s - %(message)s', 
-                    datefmt='%m/%d/%Y %I:%M:%S %p', filemode='w', level=logging.DEBUG)
+logging.basicConfig(filename='logs.log', format='%(asctime)s - %(pathname)s - %(funcName)s - Line: %(lineno)d - %(levelname)s - %(message)s', 
+                    datefmt='%m/%d/%Y %I:%M:%S %p', filemode='a', level=logging.INFO)
 
 logger = logging.getLogger(__name__)
 

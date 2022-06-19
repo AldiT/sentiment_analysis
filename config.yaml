@@ -1,8 +1,9 @@
 version: 0.9
+log_level: INFO
 ml:
   preprocessing:
     data_path: ./data/labelled_text.csv
-    save_results_to: ./data/result1.pkl
+    save_results_to: ./cache/preprocessing/initial_texts.pkl
     num_workers: 2
     cache: 1
   training:

@@ -70,14 +70,16 @@ async def run_distribute():
     num_workers = int(config["ml"]["preprocessing"]["num_workers"])
     cache = int(config["ml"]["preprocessing"]["cache"])
 
+    
+
+    local_cluster = LocalCluster(n_workers=num_workers, threads_per_worker=1, processes=True)
+    client = await Client(local_cluster, asynchronous=True)
+
     if cache == 1 and save_to.exists():
         logger.info("Result file already exists, skipping preprocessing!")
         client.close()
         return
-
-    local_cluster = LocalCluster(n_workers=num_workers, threads_per_worker=1, processes=True)
-    client = await Client(local_cluster, asynchronous=True)
-    
+        
     logger.info(f"Reading the data from: {data_path}")
     texts = read_data(data_path)
 
