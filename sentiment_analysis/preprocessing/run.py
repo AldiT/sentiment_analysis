@@ -40,12 +40,9 @@ def remove_special_chars(texts: List[str]) -> List[str]:
     result = []
 
     for text in texts:
-        #text = re.sub(r"[üÜ]", "ue", text)
-        #text = re.sub(r"[äÄ]", "ae", text)
-        #text = re.sub(r"[öÖ]", "oe", text)
-        #text = re.sub(r"ß", "ss", text)
-        #result.append(" ".join(re.findall('[\w]+', text)))
-        result.append(re.sub('[^A-Za-z0-9üÜäAöÖß]+', ' ', text))
+        text = re.sub(r'\S*@\S*\s?', '', text) #remove email addresses
+        text = re.sub(r'http\S+', '', text) # remove urls
+        result.append(re.sub('[^A-Za-z0-9]+', ' ', text)) # keep only alphanumeric characters
 
     return result
 
@@ -63,10 +60,54 @@ def clean(texts: List[List[str]], dask_event_name: str = None, spacy_model: str 
         event.set()
     return result
 
+def filter_nans(texts: List[str], labels: List[str]) -> List[str]:
+    result_str, result_lbl = [], []
+
+    for i, text in enumerate(texts):
+        if isinstance(text, str):
+            result_str.append(text)
+            result_lbl.append(labels[i])
+    
+    return result_str, result_lbl
+
+
+def run_sequential():
+    logger.info("Running preprocessing sequentially!")
+    
+    data_path = Path(config["ml"]["preprocessing"]["data_path"])
+    save_to_folder = str(config["ml"]["preprocessing"]["save_to"]["folder"])
+    save_to_filename = str(config["ml"]["preprocessing"]["save_to"]["filename"])
+    num_workers = int(config["ml"]["preprocessing"]["num_workers"])
+    cache = int(config["ml"]["preprocessing"]["cache"])
+
+
+    if cache == 1 and Path(f"./cache/{save_to_folder}/{save_to_filename}").exists():
+        logger.info("Result file already exists, skipping preprocessing!")
+        return
+
+    logger.info(f"Reading the data from: {data_path}")
+    texts, labels = read_data(data_path)
+
+    texts, labels = filter_nans(texts, labels)
+
+    logger.info("Preprocessing starting...")
+
+    texts = clean(texts)
+
+    logger.info("Saving results!")
+    save_cache_pkl((texts, labels), save_to_folder, save_to_filename)
+    
+    logger.info("Preprocessing done!")
+
+
+
 
 async def run_distribute():
+    logger.info("Running preprocessing distributed!")
+
     data_path = Path(config["ml"]["preprocessing"]["data_path"])
-    save_to = Path(config["ml"]["preprocessing"]["save_results_to"])
+    save_to_folder = str(config["ml"]["preprocessing"]["save_to"]["folder"])
+    save_to_filename = str(config["ml"]["preprocessing"]["save_to"]["filename"])
     num_workers = int(config["ml"]["preprocessing"]["num_workers"])
     cache = int(config["ml"]["preprocessing"]["cache"])
 
@@ -75,14 +116,15 @@ async def run_distribute():
     local_cluster = LocalCluster(n_workers=num_workers, threads_per_worker=1, processes=True)
     client = await Client(local_cluster, asynchronous=True)
 
-    if cache == 1 and save_to.exists():
+    if cache == 1 and Path(f"./cache/{save_to_folder}/{save_to_filename}").exists():
         logger.info("Result file already exists, skipping preprocessing!")
         client.close()
         return
         
     logger.info(f"Reading the data from: {data_path}")
-    texts = read_data(data_path)
+    texts, labels = read_data(data_path)
 
+    texts, labels = filter_nans(texts, labels)
 
     logger.info("Preprocessing starting...")
     func_params = {
@@ -91,7 +133,7 @@ async def run_distribute():
     texts = await distribute(client, clean, func_params, num_workers=num_workers)
 
     logger.info("Saving results!")
-    save_cache_pkl(texts, "preprocessing", "initial_texts.pkl")
+    save_cache_pkl((texts, labels), save_to_folder, save_to_filename)
     
     logger.info("Preprocessing done!")
 
@@ -100,8 +142,12 @@ async def run_distribute():
 @click.command()
 @click.option('--num-workers', default=16, help="The number of workers that will be used for preprocessing.")
 def run(num_workers: int):
-    asyncio.get_event_loop().run_until_complete(run_distribute())
-    print("Running the run function.")
+    distribute: bool = bool(config["ml"]["preprocessing"]["distribute"])
+
+    if distribute:
+        asyncio.get_event_loop().run_until_complete(run_distribute())
+    else:
+        run_sequential()
 
 
 

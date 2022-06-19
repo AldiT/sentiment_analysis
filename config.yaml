@@ -3,9 +3,12 @@ log_level: INFO
 ml:
   preprocessing:
     data_path: ./data/labelled_text.csv
-    save_results_to: ./cache/preprocessing/initial_texts.pkl
-    num_workers: 2
+    save_to: 
+      folder: preprocessing
+      filename: initial_texts.pkl
+    num_workers: 5
     cache: 1
+    distribute: 0
   training:
     graph_mode: 0
     cache: 0

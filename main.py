@@ -3,8 +3,11 @@ from typing import List, Dict, Union
 
 
 from fastapi import FastAPI
+from api.v0 import api_v0
 
 app = FastAPI()
+
+app.include_router(api_v0.router)
 
 @app.get("/")
 def read_root():

@@ -1,0 +1,15 @@
+models:
+
+  - 
+    id: 1
+    name: lstm
+    version: 2
+    cache_folder: lstmv2
+    filename: lstmv2.h5
+    history_filename: history_lstm_v2.pkl
+  -
+    id: 2
+    name: transformer
+    version: 1
+    filename: transformerv1.h5
+    history_filename: history_transformer_v1.pkl

@@ -37,3 +37,22 @@
 06/19/2022 01:13:15 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
 06/19/2022 01:13:32 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
 06/19/2022 01:13:44 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 79 - INFO - Result file already exists, skipping preprocessing!
+06/19/2022 06:52:11 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:52:19 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:52:35 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:52:35 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:52:35 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:52:35 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:52:35 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:55:52 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:55:56 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:55:56 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:55:56 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:55:56 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:55:56 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 06:56:00 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 91 - INFO - Reading the data from: data/labelled_text.csv
+06/19/2022 06:56:00 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_distribute - Line: 96 - INFO - Preprocessing starting...
+06/19/2022 06:56:00 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/dask_utils.py - split_list_data - Line: 19 - INFO - Spliting datasets!
+06/19/2022 07:09:38 PM - /Users/q541063/Documents/projects/celonis_task/utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/19/2022 07:09:43 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_sequential - Line: 86 - INFO - Reading the data from: data/labelled_text.csv
+06/19/2022 07:09:43 PM - /Users/q541063/Documents/projects/celonis_task/sentiment_analysis/preprocessing/run.py - run_sequential - Line: 91 - INFO - Preprocessing starting...
