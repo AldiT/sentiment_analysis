@@ -37,4 +37,4 @@ async def get_info():
 if __name__ == "__main__":
     load_config()
     set_environment_variables()
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
