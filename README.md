@@ -24,3 +24,18 @@ For more details on the code you should redirect to the <a href="http://aldit-se
 The model that is trained in the notebook located on ```./sentiment_analysis/train/model_prototype_lstm.ipynb```, is a Bidirectional LSTM. The reason for choosing this model is simple: it is relatively light weight and it can train reasonably fast. It is not state of the art but it serves well the purpose of a prototype.
 <br/><br/>
 The model was trained on the Google Colab platform on TPUs (Tensor Processing Units) and it takes roughly 190 seconds per epoch to train.
+
+# Running the system
+After navigating your terminal inside the project directory, type the following commands:
+
+1. ```docker build . -t sentiment_system```
+2. ```docker run -p 8000:8000 -t sentiment_system```
+
+<br/>
+After the following commands if something goes wrong make sure of the following:
+
+1. You are not behind a http(s) proxy
+2. The versions of docker and other software match the badges added above.
+
+# Testing
+For testing a simple setting was created. The file ```sentiment_task_collection.postman_collection```contains a <a href="https://www.postman.com/">Postman</a> requests collection. To run it, first make sure you <a href="https://www.postman.com/downloads/">download Postman</a> and after doing so and installing it, on the top left click import and select the above mentioned file. After it is successfully imported, click the three dots next to the name, and then clock "Run Collection".
