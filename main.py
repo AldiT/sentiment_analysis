@@ -21,10 +21,16 @@ app.include_router(api_v0.router)
 
 @app.get("/")
 async def read_root():
+    """
+    Root endpoint, redirect to most recent version of api.
+    """
     return Response(content="Most recent api version: /api/v0", status_code=200)
 
 @app.get("/info")
 async def get_info():
+    """
+    Root info endpoint, redirect to docs.
+    """
     return RedirectResponse(url="/docs")
 
 

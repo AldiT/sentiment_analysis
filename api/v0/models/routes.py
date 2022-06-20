@@ -13,6 +13,9 @@ controller = ModelController()
 
 @router.get("/")
 async def get_models():
+    """
+    This endpoint returns a list of available models.
+    """
     return controller.get_models()
 
 @router.get("/{model_id}")
@@ -38,6 +41,9 @@ async def get_prediction(model_id: int, text: str) -> JSONResponse:
 
 @router.post("/{model_id}/batch")
 async def get_batch_prediction(model_id: int, request: Request):
+    """
+    This endpoint gets a list of texts and returns the sentiment prediction results.
+    """
     body = await request.json()
     return controller.get_batch_prediction(model_id, body["texts"])
 
