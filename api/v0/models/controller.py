@@ -1,4 +1,5 @@
 
+from pydantic import JsonError
 from utils import load_cache_pkl, save_cache_pkl, load_config
 from fastapi.responses import Response, FileResponse, JSONResponse
 from fastapi import UploadFile
@@ -19,6 +20,9 @@ import yaml
 
 
 class ModelController:
+    """
+    ModelController is the class controlling everything related to models.
+    """
     
     def __init__(self, database_path: Path = Path("./model_database.yaml")):
         # TODO: Add a connection to a real database
@@ -29,11 +33,34 @@ class ModelController:
         self.nlp = spacy.load("en_core_web_sm")
 
 
-    def get_models(self):
-        return JSONResponse(content=self.database["models"], status_code=200)
+    def get_models(self) -> JSONResponse:
+        """
+        Method returns information about available models.
+
+        Returns:
+            Return a JsonReponse.
+        """
+        response = []
+        for model in self.database["models"]:
+            response.append({
+                "id": model["id"],
+                "name": model["name"],
+                "version": model["version"]
+            })
+        
+        return JSONResponse(content=response, status_code=200)
 
 
-    def get_model(self, model_id: int):
+    def get_model(self, model_id: int) -> JSONResponse:
+        """
+        This method returns a model given
+        Args:
+            model_id: The id of a model.
+            texts: A list of strings to predict sentiment on.
+
+        Returns:
+            Return a JsonReponse.
+        """
         model_data = self._get_model_data(model_id)
 
         if model_data is None:
@@ -42,7 +69,16 @@ class ModelController:
             model_path = self._get_cache_path(model_data['foldername'], model_data['filename'])
             return FileResponse(model_path, status_code=200)
 
-    def get_prediction(self, model_id: int, text: str):
+    def get_prediction(self, model_id: int, text: str) -> JSONResponse:
+        """
+        This method runs sentiment prediction on a single text.
+        Args:
+            model_id: The id of a model.
+            text: A string to predict sentiment on.
+
+        Returns:
+            Return a JsonReponse.
+        """
         model_data = self._get_model_data(model_id)
         if model_data is None:
             return Response(content=f"Model with id: {model_id} not found!", status_code=404)
@@ -60,7 +96,16 @@ class ModelController:
 
         return JSONResponse(response, status_code=200)
     
-    def get_batch_prediction(self, model_id: int, texts: List[str]):
+    def get_batch_prediction(self, model_id: int, texts: List[str]) -> JSONResponse:
+        """
+        This method runs sentiment prediction on multiple texts.
+        Args:
+            model_id: The id of a model.
+            texts: A list of strings to predict sentiment on.
+
+        Returns:
+            Return a JsonReponse.
+        """
         model_data = self._get_model_data(model_id)
         if model_data is None:
             return Response(content=f"Model with id: {model_id} not found!", status_code=404)
@@ -81,7 +126,15 @@ class ModelController:
         return JSONResponse(content=results, status_code=200)
         
 
-    def get_model_info(self, model_id: int):
+    def get_model_info(self, model_id: int) -> JSONResponse:
+        """
+        Method returns information about a model given it's id.
+        Args:
+            model_id: The id of a model.
+
+        Returns:
+            Return a JsonReponse.
+        """
         model_data = self._get_model_data(model_id)
         if model_data is None:
             return Response(content=f"Model with id: {model_id} not found!", status_code=404)
@@ -90,42 +143,63 @@ class ModelController:
         train_performance_file = self._get_cache_path(model_data["foldername"], model_data["train_history_filename"])
         test_performance_file = self._get_cache_path(model_data["foldername"], model_data["test_history_filename"])
 
-        if not train_performance_file.exists():
-            return Response(content="Train performance file not found on the server!", status_code=400)
-        if not test_performance_file.exists():
-            return Response(content="Train performance file not found on the server!", status_code=400)
-
-        with open(train_performance_file, "r") as handle:
-            train_performance = json.load(handle)
-
-        with open(test_performance_file, "rb") as handle:
-            test_performance = pkl.load(handle)
-
         response = {
             "id": model_data["id"],
             "name": model_data["name"],
             "version": model_data["version"],
-            "train_performance": train_performance,
-            "test_performance": {
+            "description": model_data["description"]
+        }
+
+        if train_performance_file.exists():
+            with open(train_performance_file, "r") as handle:
+                train_performance = json.load(handle)
+                response["train_performance"] = train_performance
+
+        if test_performance_file.exists():
+            with open(test_performance_file, "rb") as handle:
+                test_performance = pkl.load(handle)
+                response["test_performance"] = {
                 "test_loss": test_performance[0],
                 "test_accuracy": test_performance[1],
                 "test_f1_score": test_performance[2]
             }
-            
-        }
 
         return JSONResponse(content=response, status_code=200)
 
-    def preprocess(self, texts: List):
+    def preprocess(self, texts: List) -> List[str]:
+        """
+        Method runs the preprocessing functions one the passed texts.
+        Args:
+            texts: A list of strings.
 
+        Returns:
+            Return a list of strings.
+        """
         texts = remove_special_chars(texts)
         texts = remove_stopwords(texts, model=self.nlp)
         return texts
 
-    def _get_cache_path(self, foldername: str, filename):
+    def _get_cache_path(self, foldername: str, filename) -> Path:
+        """
+        Method returns a path to the cache with the given parameters.
+        Args:
+            foldername: The name of the folder within the cache.
+            filename: The name of the file in the above folder.
+
+        Returns:
+            Return a Path.
+        """
         return Path(f"./cache/models/{foldername}/{filename}")
 
-    def _get_model_data(self, model_id: int):
+    def _get_model_data(self, model_id: int) -> Dict:
+        """
+        Method returns the data for a model with a given id.
+        Args:
+            id: The unique identifier of the model.
+
+        Returns:
+            Return a dictionary with information about the model with the given id. None if model is not found.
+        """
         result = None
 
         for model in self.database["models"]:
@@ -135,7 +209,15 @@ class ModelController:
             
         return result
     
-    def _single_inference(self, text):
+    def _single_inference(self, text) -> Dict:
+        """
+        Method to perform inference on a single text.
+        Args:
+            text: The text to predict sentiment for.
+
+        Returns:
+            Returns a dictionary with a label and the prediction score normalized between 0 and 1.
+        """
         text = self.preprocess([text])[0]
         tokenized = self.tokenizer.encode(text)
 
@@ -148,11 +230,28 @@ class ModelController:
         }
         return response
 
-    def _load_model_from_cache(self, folder: str, filename: str):
+    def _load_model_from_cache(self, folder: str, filename: str) -> tf.keras.Model:
+        """
+        Load the model from a local cache location.
+        Args:
+            folder: The folder within the cache where the model is located.
+            filename: The name of the file in ./cache/folder .
+
+        Returns:
+            Returns a tensorflow.keras model.
+        """
         model = tf.keras.models.load_model(f"./cache/{folder}/{filename}")
         return model
 
-    def _get_label(self, position: int):
+    def _get_label(self, position: int) -> Dict:
+        """
+        Return the label given the model maximum output position (argmax),
+        Args:
+            position: The position of the maximum logit in the prediction class, for sentiment analysis it can only be 0, 1 or 2.
+
+        Returns:
+            Returns a dictionary with a label and the prediction score normalized between 0 and 1.
+        """
         if position == 0:
             return "NEUTRAL"
         elif position == 1:
