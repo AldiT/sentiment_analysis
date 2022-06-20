@@ -10,12 +10,23 @@ import os
 import sys
 
 router = APIRouter(
-    prefix="/data"
+    prefix="/datasets"
 )
 
 controller = DataController()
 
 
 @router.get("/")
-async def get_data_list():
-    return controller.get_data_list()
+async def get_dataset_list():
+    return controller.get_dataset_list()
+
+@router.get("/{dataset_id}")
+async def get_dataset(dataset_id: int):
+    controller.get_dataset(dataset_id)
+
+@router.get("/{dataset_id}/download")
+async def get_download_dataset(dataset_id: int):
+    """
+        Endpoint description.
+    """
+    controller.get_download_dataset(dataset_id)

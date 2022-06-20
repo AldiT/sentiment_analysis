@@ -1754,3 +1754,45 @@ AttributeError: 'Request' object has no attribute 'texts'
 06/20/2022 12:00:37 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
 06/20/2022 12:00:37 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
 06/20/2022 12:00:37 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [42325]
+06/20/2022 10:25:52 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:25:56 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:26:09 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:26:10 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:26:10 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:26:10 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [1243]
+06/20/2022 10:26:10 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/20/2022 10:26:10 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/20/2022 10:27:12 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/20/2022 10:27:13 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/20/2022 10:27:13 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/20/2022 10:27:13 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [1243]
+06/20/2022 10:27:18 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:27:19 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:27:19 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:27:19 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [1851]
+06/20/2022 10:27:19 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/20/2022 10:27:19 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/20/2022 10:30:03 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/20/2022 10:30:03 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/20/2022 10:30:03 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/20/2022 10:30:03 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [1851]
+06/20/2022 10:30:08 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:30:09 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:30:09 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:30:09 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [2852]
+06/20/2022 10:30:09 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/20/2022 10:30:09 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/20/2022 10:31:11 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/20/2022 10:31:11 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/20/2022 10:31:11 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/20/2022 10:31:11 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [2852]
+06/20/2022 10:31:17 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:31:17 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:31:18 AM - /Users/q541063/Documents/projects/celonis_task/./utils.py - load_config - Line: 25 - INFO - Config file read successfully!
+06/20/2022 10:31:18 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 75 - INFO - Started server process [3305]
+06/20/2022 10:31:18 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 45 - INFO - Waiting for application startup.
+06/20/2022 10:31:18 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - startup - Line: 59 - INFO - Application startup complete.
+06/20/2022 10:34:01 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - shutdown - Line: 252 - INFO - Shutting down
+06/20/2022 10:34:01 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 64 - INFO - Waiting for application shutdown.
+06/20/2022 10:34:01 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/lifespan/on.py - shutdown - Line: 75 - INFO - Application shutdown complete.
+06/20/2022 10:34:01 AM - /Users/q541063/opt/anaconda3/envs/task/lib/python3.8/site-packages/uvicorn/server.py - serve - Line: 85 - INFO - Finished server process [3305]

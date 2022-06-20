@@ -10,7 +10,7 @@ models:
     test_history_filename: history_test_lstm_v3.pkl
   -
     id: 2
-    name: transformer
+    name: DistilBERT
     version: 1
     foldername: transformerv1
     filename: transformerv1.h5
