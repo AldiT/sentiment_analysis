@@ -10,3 +10,4 @@ api/v0/m
 .env
 dask-worker-space/
 cache/
+html/

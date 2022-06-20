@@ -8,5 +8,6 @@ RUN python -m pip install "dask[distributed]" --upgrade
 
 RUN python -m spacy download en_core_web_sm
 
+EXPOSE 8000
 
-CMD ["python", "-m", "run"]
+CMD ["python", "main.py"]

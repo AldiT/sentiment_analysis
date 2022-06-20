@@ -18,6 +18,14 @@ from utils import save_cache_pkl
 logger = logging.getLogger(__name__)
 
 def read_data(path: Path, encoding: str = "ISO-8859-1"):
+    """
+    Read the csv data from a given path.
+    Args:
+        path: The path where the csv file is located.
+        encoding: The encoding of the csv.
+    Returns:
+        Returns a pandas DataFrame object.
+    """
     if path.is_file():
         df = pd.read_csv(path, encoding=encoding, header=None)
         text, labels = list(df[3]), list(df[2])
@@ -27,6 +35,14 @@ def read_data(path: Path, encoding: str = "ISO-8859-1"):
         sys.exit(-1)
 
 def remove_stopwords(texts: List[str], model = None) -> List[str]:
+    """
+    This function removes the stopwords from the texts.
+    Args:
+        texts: The list of strings to be cleaned.
+        model: A spacy model to get the list of stopwords from.
+    Returns:
+        Returns a list of texts with removed stop words.
+    """
     if model is None:
         sys.exit(-1)
     result = []
@@ -38,12 +54,16 @@ def remove_stopwords(texts: List[str], model = None) -> List[str]:
     return result
 
 def remove_special_chars(texts: List[str]) -> List[str]:
+    """
+    The function removes special chars from the texts.
+    Args:
+        texts: The list of strings to be cleaned.
+    Returns:
+        Returns a cleaned list of texts.
+    """
     result = []
 
     for i, text in enumerate(texts):
-        if i % 5000 == 0:
-            logger.info(f"Special char removal: {i}")
-
         if isinstance(text, str):
             for word in text.split(): # remove short forms: e.g. I'm --> I am
                 if word.lower() in contractions:
@@ -56,7 +76,16 @@ def remove_special_chars(texts: List[str]) -> List[str]:
 
     return result
 
-def clean(texts: List[List[str]], dask_event_name: str = None, spacy_model: str = "en_core_web_sm"):
+def clean(texts: List[str], dask_event_name: str = None, spacy_model: str = "en_core_web_sm"):
+    """
+    The function cleans a given list of texts.
+    Args:
+        texts: The list of strings to be cleaned.
+        dask_event_name: A string name for that will be used from the worker cluster.
+        spacy_model: The name of the spacy model to be used for the stopword removal.
+    Returns:
+        Returns a cleaned list of texts.
+    """
     nlp = spacy.load(spacy_model)
 
     texts = remove_special_chars(texts)
@@ -70,6 +99,14 @@ def clean(texts: List[List[str]], dask_event_name: str = None, spacy_model: str 
     return texts
 
 def filter_nans(texts: List[str], labels: List[str]) -> List[str]:
+    """
+    The function cleans non string elements of a given string list.
+    Args:
+        texts: The list of strings to be cleaned.
+        labels: The labels of the given string.
+    Returns:
+        Returns a cleaned list of texts.
+    """
     result_str, result_lbl = [], []
 
     for i, text in enumerate(texts):
@@ -80,6 +117,12 @@ def filter_nans(texts: List[str], labels: List[str]) -> List[str]:
     return result_str, result_lbl
 
 def run_sequential(save: bool = True):
+    """
+    The function runs the preprocessing step sequentially.
+    Args:
+        save: A boolean to indicate if the results should be saved in the cache.
+    Returns:
+    """
     logger.info("Running preprocessing sequentially!")
     
     data_path = Path(config["ml"]["preprocessing"]["data_path"])
@@ -112,6 +155,11 @@ def run_sequential(save: bool = True):
 
 
 async def run_distribute():
+    """
+    The function runs the preprocessing step distributed using a cluster of workers.
+    Args:
+    Returns:
+    """
     logger.info("Running preprocessing distributed!")
 
     data_path = Path(config["ml"]["preprocessing"]["data_path"])

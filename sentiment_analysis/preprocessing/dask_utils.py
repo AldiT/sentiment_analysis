@@ -23,14 +23,32 @@ def split_list_data(data: List, splits: int = 16):
         to_index = i + chunk_size if i + chunk_size < len(data) else len(data)
         yield data[i: to_index]
 
-async def get_client_local(local_cluster: LocalCluster, use_old: bool = True):
+async def get_client_local(worker_cluster: LocalCluster) -> Client:
+    """
+    A helper function to retrieve the global client object or create a new one if it doesn't exist.
+    Args:
+        worker_cluster: The cluster of workers which the client object will manage (if a new one is created).
+
+    Returns:
+        Splits of datasets every run.
+    """
     try:
         return await get_client()
     except ValueError:
         logger.info("Existing client not found, creating new one!")
-        return await Client(local_cluster, asynchrounous=True)
+        return await Client(worker_cluster, asynchrounous=True)
 
-async def distribute(client: Client, func, func_params: Dict = None, num_workers: int = 16, max_memory_per_chunk: int = 2**100):
+async def distribute(client: Client, func, func_params: Dict = None, num_workers: int = 16):
+    """
+    A helper function to launch a distributed job on the client object.
+    Args:
+        client: The client on the underlying cluster of which the job should be run.
+        func: A function (job) to be distributed.
+        func_params: The parameters to be passed to the function (job).
+        num_workers: The number of workers to be used for this job.
+    Returns:
+        Returns the accumulated result from all the workers.
+    """
     events = []
     futures = []
     data_futures = []

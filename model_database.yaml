@@ -2,17 +2,19 @@ models:
 
   - 
     id: 1
-    name: lstm
-    version: 2
+    name: LSTM
+    version: 3
     foldername: lstmv3
     filename: lstmv3.h5
+    description: Trained on length 20 texts.
     train_history_filename: history_lstm_v3.json
     test_history_filename: history_test_lstm_v3.pkl
-  -
+  - 
     id: 2
-    name: transformer
-    version: 1
-    foldername: transformerv1
-    filename: transformerv1.h5
-    train_history_filename: history_transformer_v3.json
-    test_history_filename: history_transformer_lstm_v3.pkl
+    name: LSTM
+    version: 4
+    foldername: lstmv4
+    filename: lstmv4.h5
+    description: Trained on length 50 texts.
+    train_history_filename: history_lstm_v4.json
+    test_history_filename: history_test_lstm_v4.pkl
