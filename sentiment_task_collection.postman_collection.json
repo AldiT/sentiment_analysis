@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "f401f063-ffc1-4e5c-a224-55f3e7864056",
+		"name": "sentiment_task_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6746658"
+	},
+	"item": [
+		{
+			"name": "data",
+			"item": [
+				{
+					"name": "data_root",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_v0_host}}/data",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_dataset_info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_v0_host}}/data/1",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"data",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_dataset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_v0_host}}/data/1/download",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"data",
+								"1",
+								"download"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "models",
+			"item": [
+				{
+					"name": "models_root",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_v0_host}}/models",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"models"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_model_info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_v0_host}}/models/1",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"models",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download_model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_v0_host}}/models/1/download",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"models",
+								"1",
+								"download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "batch_inference",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"texts\":[\n            \"I hate this movie so much.\",\n            \"This movie was great cant wait to see it again!\",\n            \"I would love to get a ticket to this movie.\",\n            \"Can't wait to look at the football match this weekend\",\n            \"Today was the best day of my life.\",\n            \"I really have no opinion about this topic.\"\n        ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_v0_host}}/models/1/batch",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"models",
+								"1",
+								"batch"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single_infer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_v0_host}}/models/1/infer?text=I loved the last movie we watched together.",
+							"host": [
+								"{{api_v0_host}}"
+							],
+							"path": [
+								"models",
+								"1",
+								"infer"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "I loved the last movie we watched together."
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "app_root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}",
+					"host": [
+						"{{host}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "app_root_info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/info",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"info"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8000",
+			"type": "string"
+		},
+		{
+			"key": "api_v0_host",
+			"value": "http://localhost:8000/api/v0",
+			"type": "string"
+		}
+	]
+}
