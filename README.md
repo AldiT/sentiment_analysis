@@ -1,7 +1,7 @@
 # Sentiment analysis system 
 [![Generic badge](https://img.shields.io/badge/python-3.8-green.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/docker-20.10.8-blue.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/pip-21.2.4-yellow.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/pypi-21.2.4-yellow.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/docker_build-passed-green.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/stability-experimental-orange.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/version-0.1-aquamarine.svg)](https://shields.io/)
