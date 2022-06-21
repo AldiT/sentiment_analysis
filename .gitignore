@@ -1,4 +1,3 @@
-data/*
 __pycache__
 sentiment_analysis/data_exploration/.ipynb_checkpoints
 sentiment_analysis/preprocessing/__pycache__
@@ -9,10 +8,13 @@ api/v0/__pycache__
 api/v0/m
 .env
 dask-worker-space/
-cache/
 html/
 sentiment-user.csv
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+cache/models/lstmv1
+cache/models/lstmv2
+cache/models/lstmv1.h5
+cache/bert
