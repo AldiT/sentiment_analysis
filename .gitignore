@@ -11,3 +11,8 @@ api/v0/m
 dask-worker-space/
 cache/
 html/
+sentiment-user.csv
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
