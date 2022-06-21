@@ -43,3 +43,9 @@ For testing a simple setting was created. The file ```sentiment_task_collection.
 
 Information about the endpoint can be found on ```/docs```.
 If you run the docker image locally, simply go to: ```http://localhost:8000/docs```
+
+# Preprocessing
+
+The module ```sentiment_analysis```contains the preprocessing submodule.
+Given that all the information, input file and save location is provided, you can run the preprocessing module by typing:<br/>
+```python -m sentiment_analysis.run```
